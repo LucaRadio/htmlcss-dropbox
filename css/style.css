@@ -5,12 +5,12 @@
 }
 
 .main-container {
-    width: 920px;
+    width: 70vw;
     margin: auto;
 }
 
 .mini-container {
-    width: 800px;
+    width: 60vw;
     margin: auto;
 }
 
@@ -36,6 +36,7 @@ button {
     border: none;
     background-color: #0061ff;
     color: white;
+    overflow: auto;
 }
 
 section {
@@ -79,11 +80,11 @@ h3 {
     top: 70px;
 }
 
-.header-bio {
+.flex-shorter {
     width: 30%;
 }
 
-.header-bio>* {
+.flex-shorter>* {
     margin-bottom: 1rem;
 }
 
@@ -92,11 +93,11 @@ h3 {
     margin-top: 40px;
 }
 
-.img-header-container {
+.flex-longer {
     width: 70%;
 }
 
-.img-header-container img {
+.flex-longer img {
     width: 100%;
 }
 
@@ -144,11 +145,16 @@ h3 {
 .subscription-container {
     padding-top: 50px;
     display: flex;
+    column-gap: 2rem;
+
 }
 
 .subscription {
     border: 1px solid #d2d2d5;
     width: 30%;
+    flex-grow: 1;
+    overflow: auto;
+    min-width: 100px;
 }
 
 .type {
@@ -200,4 +206,50 @@ h3 {
 
 .fa-check {
     color: #0061ff;
+}
+
+.team {
+    display: flex;
+}
+
+.team .flex-shorter {
+    text-align: center;
+    width: 30%;
+    margin-left: 2rem;
+}
+
+.flex-longer p {
+    margin: 0;
+}
+
+.subscription-team {
+    width: 100%;
+    border: 1px solid #d2d2d5;
+}
+
+.section-fix {
+    padding-top: 0;
+}
+
+.flex-long {
+    width: 60%;
+}
+
+.flex-long img {
+    width: 100%;
+}
+
+.flex-short {
+    width: 40%;
+    padding: 3rem 3rem;
+}
+
+.flex-short>* {
+    margin-bottom: 1rem;
+}
+
+.flex-short>button {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
 }
