@@ -274,3 +274,68 @@ h3 {
 .card>* {
     margin-bottom: 1rem;
 }
+
+.section-fullwidth {
+    display: flex;
+}
+
+
+.cubes-container {
+    width: calc(100% / 3);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class*=cube-] {
+    width: calc(100% / 2);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% / 2);
+}
+
+[class*=cube-] svg {
+    width: 50%;
+    fill: white;
+}
+
+.cube-1 {
+    background-color: #a2d39b;
+    border: 15px solid #d1e9cd;
+}
+
+.cube-2 {
+    background-color: #61082b;
+}
+
+.cube-3 {
+    background-color: #0093ce;
+}
+
+/* Forzato perchè svg non funzionava */
+.cube-3 svg {
+    position: relative;
+    bottom: -50px;
+}
+
+.cube-4 {
+    background-color: #ff1c1c;
+}
+
+.svg-middle-container {
+    padding: 0rem 2rem;
+    background-color: #f5f5f5;
+}
+
+.svg-middle-container svg {
+    width: 50%;
+}
+
+.svg-middle-container>* {
+    margin-bottom: 1.5rem;
+}
+
+.cube-5 {
+    background-color: #d5001f;
+}
