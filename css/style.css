@@ -37,6 +37,7 @@ button {
     background-color: #0061ff;
     color: white;
     overflow: auto;
+    cursor: pointer;
 }
 
 section {
@@ -68,6 +69,11 @@ h3 {
 .nav-container ul li {
     padding: 0.7rem 0.5rem;
     vertical-align: middle;
+}
+
+.nav-container ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .header-container {
@@ -202,6 +208,7 @@ h3 {
     width: 20%;
     height: 1px;
     background-color: #d2d2d5;
+    display: inline-block;
 }
 
 .fa-check {
@@ -338,4 +345,102 @@ h3 {
 
 .cube-5 {
     background-color: #d5001f;
+}
+
+.cube-6 {
+    background-color: #b4d0e7;
+}
+
+.cube-7 {
+    background-color: #0d2481;
+}
+
+.cube-8 {
+    background-color: #ffd830;
+}
+
+.banner {
+    background-color: #b4d0e7;
+    margin-top: -50px;
+}
+
+.text-banner-container {
+    display: flex;
+    align-items: center;
+}
+
+.text-banner-container .flex-long h2 {
+    color: #61082b;
+    margin: 0;
+}
+
+.flex-short .btn-banner {
+    width: 100%;
+    border: none;
+}
+
+.q-and-a h3 {
+    margin: 2rem 0rem;
+    display: inline-block;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question i {
+    padding: 2rem;
+}
+
+.q-and-a-title {
+    margin: 2em 0em;
+}
+
+.hr-question {
+    width: 100%;
+    height: 1px;
+    background-color: #999999;
+}
+
+footer {
+    padding-top: 50px;
+    background-color: #000000;
+    color: white;
+}
+
+footer ul li:first-child {
+    list-style: none;
+    margin: 1rem 0rem;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+footer ul li {
+    margin: 0.5rem 0rem;
+    list-style: none;
+}
+
+footer ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.lists-container {
+    display: flex;
+    column-gap: 2rem;
+    padding-bottom: 50px;
+}
+
+footer ul {
+    flex-grow: 1;
+}
+
+.country {
+    padding: 2rem 0rem;
+}
+
+.country>* {
+    display: inline-block;
 }
