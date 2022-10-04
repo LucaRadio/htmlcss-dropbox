@@ -10,6 +10,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    overflow: auto;
 
 }
 
@@ -307,14 +308,19 @@ h3 {
 
 .section-fullwidth {
     display: flex;
+
 }
 
 
 .cubes-container {
-    width: calc(100% / 3);
+    width: calc(100vw / 3);
     display: flex;
     flex-wrap: wrap;
     flex-shrink: 0;
+    height: auto;
+    background-color: #f5f5f5;
+
+
 }
 
 [class*=cube-] {
@@ -353,10 +359,10 @@ h3 {
 
 .svg-middle-container {
     padding: 0rem 2rem;
-    background-color: #f5f5f5;
-    overflow: auto;
-    height: auto;
+
     width: calc(100vw / 3);
+    display: inline-block;
+
 }
 
 .svg-middle-container svg {
