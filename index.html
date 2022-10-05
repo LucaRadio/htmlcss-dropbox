@@ -115,7 +115,7 @@
                     <p>Finalmente tutti i tuoi strumenti, contenuti e collaboratori sono accessibili dallo stesso posto. Dropbox Business é più di uno spazio di archiviazione sicuro: é un modo intelligente e integrato per ottimizzare il flusso di lavoro esistente.</p>
                     <button>Inizia la prova gratuita</button>
                     <div>Annulla in qualisiasi momento</div>
-                    <div><i class="fa-solid fa-arrow-down"></i></div>
+                    <div><a href="#planes"><i class="fa-solid fa-arrow-down"></i></a></div>
                 </div>
                 <div class="flex-longer">
                     <img src="img/jumbo.png" alt="Jumbo">
@@ -123,16 +123,20 @@
             </div>
         </div>
     </header>
-    <section>
+    <section id="planes">
         <div  class="mini-container" style="margin-top: 70px;">
             <h2>Trova il piano business che fa per te</h2>
-            <div class="month">
-            <div class="radio"><i class="fa-solid fa-circle"></i></div>
-            <div class="billing"> Fatturazione mensile</div>
-            </div>
-            <div class="year">
-                <div class="radio"><i class="fa-solid fa-circle"></i></div>
-                <div class="billing">Fatturazione annuale</div>
+            <div class="billing-container">
+                <label class="month">
+                    <input type="radio" name="billing">
+                    <div class="radio"></div>
+                    <span>Fatturazione mensile</span>
+                </label>
+                <label class="year">
+                    <input type="radio" name="billing">
+                    <div class="radio"></div>
+                    <span>Fatturazione annuale</span>
+                </label>
             </div>
             <div class="subscription-container mini-container">
                 <div class="subscription">

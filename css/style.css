@@ -6,7 +6,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    overflow: auto;
 
 }
 
@@ -69,6 +68,14 @@ h3 {
     font-size: 20px
 }
 
+label {
+    margin-right: 10px;
+}
+
+label>* {
+    vertical-align: middle;
+}
+
 .nav-container {
     height: 100%;
     display: flex;
@@ -85,7 +92,7 @@ h3 {
 }
 
 .logo-container {
-    margin-right: 10px;
+    margin: 0px 10px;
 }
 
 .list-container {
@@ -149,10 +156,20 @@ h3 {
     margin-bottom: 1rem;
 }
 
+.flex-shorter a {
+    color: black;
+}
+
 .fa-arrow-down {
     font-size: 40px;
     margin-top: 100px;
     padding-bottom: 70px;
+}
+
+.fa-arrow-down:hover {
+    transition: all 1s;
+    color: #0061ff;
+    transform: scale(1.5);
 }
 
 .flex-longer {
@@ -164,12 +181,29 @@ h3 {
     display: block;
 }
 
-.billing {
-    display: inline-block;
-    vertical-align: middle;
+.billing-container input {
+    /* display: none; */
 }
 
-/* QUI VA IL RADIO  */
+.radio {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #cbcbce;
+    display: inline-block;
+}
+
+label input {
+    display: none;
+}
+
+.year input:checked+.radio {
+    border: 5px solid #0061ff;
+}
+
+.month input:checked+.radio {
+    border: 5px solid #0061ff;
+}
 
 .subscription-container {
     padding-top: 50px;
