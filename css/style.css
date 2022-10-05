@@ -1,7 +1,3 @@
-:root {
-    --fullscreen-width: calc(100%/6);
-}
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -27,7 +23,7 @@ body {
 nav {
     height: 60px;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     width: 100%;
     background-color: white;
 }
@@ -36,6 +32,7 @@ header {
     padding-top: 60px;
     background-color: #b4d0e7;
     width: 100%;
+    min-height: 30vh;
 }
 
 h1 {
@@ -50,6 +47,12 @@ button {
     overflow: auto;
     cursor: pointer;
     min-width: 80px;
+    margin-right: 1rem;
+}
+
+button:hover {
+    filter: invert(0.1);
+    transition: all .5s;
 }
 
 section>div {
@@ -67,38 +70,66 @@ h3 {
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
     height: 100%;
-}
-
-.nav-container ul {
     display: flex;
-    list-style: none;
     align-items: center;
-    height: 100%;
+    justify-content: space-between;
 }
-
 
 .left-nav {
     display: flex;
+    height: 100%;
+    align-items: center;
+    position: relative;
+
+}
+
+.logo-container {
+    margin-right: 10px;
+}
+
+.list-container {
+    height: 100%;
+}
+
+.list-container>ul {
+    display: flex;
+    list-style: none;
+    height: 100%;
+}
+
+.list-container>ul>li {
+    position: relative;
+    background-color: white;
+}
+
+
+.list-container>ul>li a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0rem 1rem;
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+    z-index: 1;
+}
+
+.list-container>ul>li a:not(:hover) {
+    background-color: white;
+}
+
+.list-container>ul>li a:hover {
+    background-color: #f2eee8;
+    z-index: 2;
+}
+
+.right-nav {
+    display: flex;
+    height: 100%;
     align-items: center;
 }
 
-.logo {
-    padding: 1rem;
-}
-
-
-.nav-container ul li {
-    padding: 0.7rem 0.5rem;
-    vertical-align: middle;
-}
-
-.nav-container ul li:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
 
 .header-container {
     display: flex;
@@ -121,6 +152,7 @@ h3 {
 .fa-arrow-down {
     font-size: 40px;
     margin-top: 100px;
+    padding-bottom: 70px;
 }
 
 .flex-longer {
@@ -129,6 +161,7 @@ h3 {
 
 .flex-longer img {
     width: 100%;
+    display: block;
 }
 
 .billing {
@@ -136,41 +169,7 @@ h3 {
     vertical-align: middle;
 }
 
-.radio {
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    border-radius: 50%;
-    background-color: #0061ff;
-    position: relative;
-    vertical-align: middle;
-}
-
-.fa-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 0.7rem;
-}
-
-.month,
-.year {
-    display: inline-block;
-}
-
-.year {
-    margin-left: 15px;
-}
-
-.year .radio {
-    background-color: #d2d2d5;
-}
-
-.year .radio .fa-circle {
-    font-size: 1rem;
-}
+/* QUI VA IL RADIO  */
 
 .subscription-container {
     padding-top: 50px;
@@ -268,6 +267,7 @@ h3 {
 
 .flex-long img {
     width: 100%;
+    display: block;
 }
 
 .flex-short {
@@ -315,21 +315,22 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     background-color: #f5f5f5;
+    aspect-ratio: 1/1;
 }
 
 [class*=cube-] {
     width: calc(100% / 2);
-    height: calc(100vw / 6);
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    aspect-ratio: 1/1;
 
 }
 
 [class*=cube-] img {
     width: 50%;
     color: white;
+    display: block;
 }
 
 .cube-1 {
@@ -351,13 +352,14 @@ h3 {
 
 .svg-middle-container {
     padding: 0rem 2rem;
-    height: calc(100vw / 3);
     overflow: auto;
+    aspect-ratio: 1/1;
 
 }
 
 .svg-middle-container svg {
-    width: 50%;
+    width: 75%;
+    display: block;
 }
 
 .svg-middle-container>* {
@@ -466,4 +468,28 @@ footer ul {
 
 .country>* {
     display: inline-block;
+}
+
+
+/* Effetti */
+
+.dropdown {
+    background-color: #f2eee8;
+    position: absolute;
+    transform: translateY(-400px);
+    transition: 1s;
+    z-index: 0;
+    width: 100%;
+
+}
+
+.dropdown ul li {
+    list-style: none;
+    padding: .5rem;
+
+}
+
+.list-container>ul>li a:hover+.dropdown {
+    transform: translateY(0px);
+    position: absolute;
 }
