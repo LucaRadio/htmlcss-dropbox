@@ -68,7 +68,7 @@ h3 {
     font-size: 20px
 }
 
-label {
+.billing-container label {
     margin-right: 10px;
 }
 
@@ -181,10 +181,6 @@ label>* {
     display: block;
 }
 
-.billing-container input {
-    /* display: none; */
-}
-
 .radio {
     width: 20px;
     height: 20px;
@@ -193,7 +189,7 @@ label>* {
     display: inline-block;
 }
 
-label input {
+.billing-container label input {
     display: none;
 }
 
@@ -442,12 +438,6 @@ label input {
     display: inline-block;
 }
 
-.question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .question i {
     padding: 2rem;
 }
@@ -526,4 +516,30 @@ footer ul {
 .list-container>ul>li a:hover+.dropdown {
     transform: translateY(0px);
     position: absolute;
+}
+
+.faq-container {
+    display: block;
+}
+
+.faq-container input {
+    display: none;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-angle-down {
+    padding: 0px 50px;
+}
+
+.answer1 {
+    display: none;
+    padding-bottom: 1rem;
+}
+
+.faq-container input:checked+.answer1 {
+    display: block;
 }
